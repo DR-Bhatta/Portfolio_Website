@@ -1,0 +1,166 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #1e40af;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --gray: #64748b;
+  --bg: #f8fafc;
+  --text: #0f172a;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #f8fafc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+header h1 { font-size: 3rem; }
+
+.header-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: white;
+  color: var(--primary);
+}
+
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+}
+
+/* NAV */
+nav {
+  background: white;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 15px;
+  gap: 30px;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* ABOUT */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.center { text-align: center; }
+.muted { color: var(--gray); }
+
+/* SKILLS */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  background: #eef2ff;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* CONTACT */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  border: none;
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+/* FLOATING */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#darkToggle {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+}

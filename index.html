@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dilli Raj Bhatta | Portfolio</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="darkToggle">🌙 Dark</button>
+
+<header>
+  <h1><span id="typed-name"></span></h1>
+  <p>Bachelor in Computer Engineering (2022 – Present)</p>
+  <div class="header-buttons">
+    <a href="#projects" class="btn btn-primary">View Projects</a>
+    <a href="#contact" class="btn btn-outline">Contact Me</a>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about" class="fade-in">
+  <h2>Profile</h2>
+  <div class="about-grid">
+    <div class="card center">
+      <img src="Gemini_Generated_Image_b6mrh3b6mrh3b6mr1.png" alt="Profile Photo">
+      <h3>Dilli Raj Bhatta</h3>
+      <p class="muted">Aspiring Software Engineer</p>
+      <div class="social">
+        <a href="https://github.com/your-github-username" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Professional Summary</h3>
+      <p>
+        I am <strong>Dilli Raj Bhatta</strong>, a Computer Engineering student with strong interest in full-stack development.
+      </p>
+      <p>
+        My goal is to build scalable, secure, and efficient software systems.
+      </p>
+      <h4>Education</h4>
+      <p><strong>Bachelor in Computer Engineering</strong><br>2022 – Present</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="fade-in">
+  <h2>Technical Skills</h2>
+  <div class="card skills">
+    <div class="skill">C Programming</div>
+    <div class="skill">C++</div>
+    <div class="skill">Python</div>
+    <div class="skill">Java</div>
+    <div class="skill">PHP</div>
+    <div class="skill">HTML / CSS</div>
+  </div>
+</section>
+
+<section id="projects" class="fade-in">
+  <h2>Projects</h2>
+  <div class="card">
+    <h3>Old Book Store Website</h3>
+    <p>A platform for buying and selling used books.</p>
+    <ul>
+      <li>User login & registration</li>
+      <li>Book listing</li>
+      <li>Search & browse</li>
+      <li>Buyer–seller interaction</li>
+    </ul>
+    <div class="project-tags">
+      <span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span>
+    </div>
+  </div>
+</section>
+
+<section id="blog" class="fade-in">
+  <h2>Blog & Learning</h2>
+  <div class="card">
+    <ul>
+      <li>Advanced PHP & MySQL</li>
+      <li>Java OOP</li>
+      <li>Python problem solving</li>
+      <li>UI/UX best practices</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="fade-in">
+  <h2>Contact Me</h2>
+  <div class="contact-grid">
+    <div class="card">
+      <p><i class="fas fa-user"></i> Dilli Raj Bhatta</p>
+      <p><i class="fas fa-graduation-cap"></i> Computer Engineering Student</p>
+      <p><i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/977XXXXXXXXXX" target="_blank">Chat on WhatsApp</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <form onsubmit="sendToWhatsApp(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Dilli Raj Bhatta</p>
+  <div class="social">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<a href="https://wa.me/977XXXXXXXXXX" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
