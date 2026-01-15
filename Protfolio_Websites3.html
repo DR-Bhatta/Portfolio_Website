@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dilli Raj Bhatta | Portfolio</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e40af;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --bg: #f8fafc;
+      --text: #0f172a;
+    }
+
+    body.dark {
+      --bg: #0f172a;
+      --text: #f8fafc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
+
+    .header-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary { background: white; color: var(--primary); }
+    .btn-primary:hover { background: #e0e7ff; }
+
+    .btn-outline { border: 2px solid white; color: white; }
+    .btn-outline:hover { background: white; color: var(--primary); }
+
+    /* ================= NAV ================= */
+    nav {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 15px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav a { text-decoration: none; color: var(--dark); font-weight: 600; }
+    nav a:hover { color: var(--primary); }
+
+    /* ================= SECTIONS ================= */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: var(--primary);
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+      transition: 0.3s;
+    }
+
+    .card:hover { transform: translateY(-8px); }
+
+    /* ================= ABOUT ================= */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ================= SKILLS ================= */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .skill {
+      background: #eef2ff;
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+      font-weight: 700;
+      color: #1e3a8a;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      background: var(--primary);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* ================= PROJECT ================= */
+    .project-tags span {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #1e3a8a;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 5px 5px 0 0;
+    }
+
+    /* ================= BLOG ================= */
+    .blog-list ul { margin-left: 20px; }
+
+    /* ================= CONTACT ================= */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .contact-info i { color: var(--primary); margin-right: 10px; }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #cbd5f5;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    form button:hover { background: var(--secondary); }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+
+    footer a { color: #93c5fd; margin: 0 10px; font-size: 1.3rem; }
+
+    /* ================= ANIMATION ================= */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: 0.9s ease;
+    }
+
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ================= FLOATING BUTTONS ================= */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      z-index: 999;
+      transition: 0.3s;
+    }
+
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    #darkToggle {
+      position: fixed;
+      left: 25px;
+      bottom: 25px;
+      z-index: 999;
+      padding: 12px 16px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+<button id="darkToggle">🌙 Dark</button>
+
+<header>
+  <h1><span id="typed-name"></span></h1>
+  <p>Bachelor in Computer Engineering (2022 – Present)</p>
+  <div class="header-buttons">
+    <a href="#projects" class="btn btn-primary">View Projects</a>
+    <a href="#contact" class="btn btn-outline">Contact Me</a>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about" class="fade-in">
+  <h2>Profile</h2>
+  <div class="about-grid">
+    <div class="card" style="text-align:center;">
+      <img src="Gemini_Generated_Image_b6mrh3b6mrh3b6mr1.png" alt="Profile Photo" style="width:220px;height:220px;border-radius:50%;object-fit:cover;margin-bottom:15px;box-shadow:0 10px 25px rgba(0,0,0,0.2);">
+      <h3>Dilli Raj Bhatta</h3>
+      <p style="color:var(--gray);">Aspiring Software Engineer</p>
+      <div style="margin-top:10px;font-size:1.4rem;">
+        <a href="https://github.com/your-github-username" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" style="margin-left:12px;"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Professional Summary</h3>
+      <p>
+        I am <strong>Dilli Raj Bhatta</strong>, a Computer Engineering student with a strong passion for software development and full‑stack web technologies.
+        Currently pursuing my bachelor’s degree (2022 – Present), I focus on building practical, user‑centric applications that solve real‑world problems.
+      </p>
+      <p>
+        I have hands‑on experience with multiple programming languages and enjoy continuously learning modern tools and frameworks.
+        My long‑term goal is to become a skilled software engineer capable of designing scalable, secure, and efficient systems.
+      </p>
+      <h4 style="margin-top:15px;">Education</h4>
+      <p><strong>Bachelor in Computer Engineering</strong><br>2022 – Present</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="fade-in">
+  <h2>Technical Skills</h2>
+  <div class="card skills">
+    <div class="skill">C Programming</div>
+    <div class="skill">C++</div>
+    <div class="skill">Python</div>
+    <div class="skill">Java</div>
+    <div class="skill">PHP</div>
+    <div class="skill">HTML / CSS</div>
+  </div>
+</section>
+
+<section id="projects" class="fade-in">
+  <h2>Projects</h2>
+  <div class="card">
+    <h3>Old Book Store Website</h3>
+    <p>A web platform connecting buyers and sellers of used books.</p>
+    <ul style="margin-left:20px;">
+      <li>User login & registration</li>
+      <li>Book listing with price & condition</li>
+      <li>Search and browse books</li>
+      <li>Buyer–seller interaction</li>
+    </ul>
+    <div class="project-tags">
+      <span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span>
+    </div>
+  </div>
+</section>
+
+<section id="blog" class="fade-in">
+  <h2>Blog & Learning</h2>
+  <div class="card blog-list">
+    <h3>My Learning Focus</h3>
+    <ul>
+      <li>Advanced PHP & MySQL</li>
+      <li>Java OOP Concepts</li>
+      <li>Python for problem solving</li>
+      <li>Frontend UI/UX best practices</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="fade-in">
+  <h2>Contact Me</h2>
+  <div class="contact-grid">
+    <div class="card contact-info">
+      <p><i class="fas fa-user"></i> Dilli Raj Bhatta</p>
+      <p><i class="fas fa-graduation-cap"></i> Computer Engineering Student</p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/977XXXXXXXXXX" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+    <div class="card">
+      <form onsubmit="sendToWhatsApp(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Dilli Raj Bhatta</p>
+  <div style="margin-top:10px;">
+    <a href="https://github.com/your-github-username" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/977XXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<a href="https://wa.me/977XXXXXXXXXX" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+  const toggle = document.getElementById('darkToggle');
+  toggle.onclick = () => {
+    document.body.classList.toggle('dark');
+    toggle.textContent = document.body.classList.contains('dark') ? '☀️ Light' : '🌙 Dark';
+  };
+
+  function sendToWhatsApp(e) {
+    e.preventDefault();
+    const name = e.target[0].value;
+    const email = e.target[1].value;
+    const message = e.target[2].value;
+    const text = `Hello, I am ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    window.open(`https://wa.me/977XXXXXXXXXX?text=${text}`, '_blank');
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  // Typing Animation
+  const text = "Dilli Raj Bhatta";
+  let index = 0;
+  const speed = 120;
+  const typedEl = document.getElementById('typed-name');
+
+  function typeEffect() {
+    if (index < text.length) {
+      typedEl.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, speed);
+    }
+  }
+
+  typeEffect();
+</script>
+
+</body>
+</html>
