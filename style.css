@@ -68,7 +68,6 @@ header p { font-size: 1.2rem; color: var(--gray); }
 }
 .social-links a:hover { transform: translateY(-5px); color: var(--accent); }
 
-
 /* Sections */
 section { padding: 5rem 10%; }
 .section-title {
