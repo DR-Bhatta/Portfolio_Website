@@ -4,220 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dilli Raj Bhatta | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="style3.css" rel="stylesheet">
 </head>
 <body>
-    <script>
-    function openModal(imgSrc) {
-        document.getElementById("certModal").style.display = "block";
-        document.getElementById("fullImg").src = imgSrc;
-    }
-    function closeModal() {
-        document.getElementById("certModal").style.display = "none";
-    }
 
-    // Close modal if user presses 'Esc' key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === "Escape") {
-            closeModal();
-        }
-    });
-</script>
-
-    <!-- Navigation -->
     <nav>
-        <div class="logo">DRB<span>.</span></div>
+        <div class="nav-brand">
+            <div class="nav-profile">
+                <img src="profile.png" alt="Dilli Raj Bhatta">
+            </div>
+            <div class="logo">DRB<span>.</span></div>
+        </div>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="about">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Dilli Raj Bhatta</span></h1>
-            <p>Computer Engineering Student | Problem Solver | Developer</p>
-            <div class="social-links">
-                <a href="https://github.com/dr-bhatta"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/dilli-raj-bhatta-a430413a6"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:dillirajbhatta08@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
+    <header class="hero" id="about">
+        <h1>Hi, I'm <span class="highlight" style="color: var(--primary);">Dilli Raj Bhatta</span></h1>
+        <p>Computer Engineering Student | Problem Solver | Developer </p>
+        <div class="social-links">
+            <a href="https://github.com/dr-bhatta" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/dilli-raj-bhatta-a430413a6" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:dillirajbhatta08@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
-    <!-- Profile Detail Section -->
-    <section id="profile-detail" class="container">
-        <div class="profile-container">
-            <div class="profile-image">
-                <!-- Replace 'your-photo.jpg' with your actual image path -->
-                <div class="image-wrapper">
-                    <img src="profile.jpeg" alt="Dilli Raj Bhatta">
-                </div>
-            </div>
-            <div class="profile-text">
-                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">About Me</h2>
-                <p>
-                    I am a dedicated <strong>Computer Engineering Student</strong> with a passion for building scalable web applications and solving complex algorithmic problems. My journey in tech is driven by curiosity and a commitment to writing clean, efficient code.
-                </p>
-                <p>
-                    Currently, I'm focusing on mastering Back-end technologies and refining my Data Structures & Algorithms (DSA) skills to build robust software solutions.
-                </p>
-                
-                <div class="profile-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">Projects Completed</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">LeetCode Problems</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3.8</span>
-                        <span class="stat-label">Current GPA</span>
-                    </div>
-                </div>
-                <a href="#contact" class="btn">Let's Talk</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <i class="fas fa-code"></i>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-terminal"></i>
                 <h3>Languages</h3>
-                <p>C, C++, Java (Advanced)</p>
+                <p>Experience with C, C++, and Java programming.</p>
             </div>
-            <div class="skill-card">
+            <div class="card">
                 <i class="fab fa-python"></i>
                 <h3>Web Dev</h3>
-                <p>Python (Django/Flask)</p>
+                <p>Gaining hands-on experience in building robust web applications with Python and Flask.</p>
             </div>
-            <div class="skill-card">
-                <i class="fas fa-microchip"></i>
+            <div class="card">
+                <i class="fas fa-brain"></i>
                 <h3>Core CS</h3>
-                <p>Data Structures & Algorithms</p>
+                <p>Familiar with Data Structures and Algorithms and their application in problem solving.</p>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" style="background: #fff;">
         <h2 class="section-title">Featured Projects</h2>
-        <div class="project-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Project Name One</h3>
-                    <p>A brief description of what you built, the tech stack used, and the problem it solved.</p>
-                    <a href="#" class="btn">View Code</a>
-                </div>
+        <div class="grid">
+            <div class="card">
+                <h3>Old Book Store – Flask Web Application</h3>
+                <p>A complete web application built using Flask, MySQL, HTML/CSS, designed to allow users to buy and sell old books online.
+The project includes user authentication, book listings, wishlist, order processing, email verification, and an admin dashboard.</p>
+                <a href="https://github.com/DR-Bhatta/Old-Book-Store" class="btn">View Source</a>
             </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Project Name Two</h3>
-                    <p>Description of your second major project. Highlight your DSA or Java implementation here.</p>
-                    <a href="#" class="btn">View Code</a>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Project Name Two</h3>
-                    <p>Description of your second major project. Highlight your DSA or Java implementation here.</p>
-                    <a href="#" class="btn">View Code</a>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Project Name Two</h3>
-                    <p>Description of your second major project. Highlight your DSA or Java implementation here.</p>
-                    <a href="#" class="btn">View Code</a>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Project Name Two</h3>
-                    <p>Description of your second major project. Highlight your DSA or Java implementation here.</p>
-                    <a href="#" class="btn">View Code</a>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Project Name Two</h3>
-                    <p>Description of your second major project. Highlight your DSA or Java implementation here.</p>
-                    <a href="#" class="btn">View Code</a>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Project Name Two</h3>
-                    <p>Description of your second major project. Highlight your DSA or Java implementation here.</p>
-                    <a href="#" class="btn">View Code</a>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Project Name Two</h3>
-                    <p>Description of your second major project. Highlight your DSA or Java implementation here.</p>
-                    <a href="#" class="btn">View Code</a>
-                </div>
-            </div>
-
+        </div>
+    </section>
+    <section id="certificates">
+        <h2 class="section-title">Certifications</h2>
+        <div class="gallery">
+            <div class="cert-item" onclick="openModal('cert1.jpg')"><img src="cert1.jpg" alt="Cert 1"></div>
         </div>
     </section>
 
-    <!-- Certificate Gallery -->
-<section id="certificates">
-    <h2 class="section-title">Certificate Gallery</h2>
-    <div class="gallery">
-        <div class="cert-item" onclick="openModal(this.querySelector('img').src)">
-            <img src="cert1.jpg" alt="C++ Certification" class="cert-img">
-        </div>
-        <div class="cert-item" onclick="openModal(this.querySelector('img').src)">
-            <img src="cert2.jpg" alt="Java Advanced" class="cert-img">
-        </div>
-        <div class="cert-item" onclick="openModal(this.querySelector('img').src)">
-            <img src="cert3.jpg" alt="Python Web" class="cert-img">
-        </div>
+    <div id="certModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img id="fullImg" class="modal-content">
     </div>
-</section>
-
-<!-- The Modal -->
-<div id="certModal" class="modal" style="display:none;" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="fullImg">
-</div>
-
-<!-- The Modal for Maximizing -->
-<div id="certModal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="fullImg">
-</div>
-</section>
-
-<!-- The Modal for Maximizing -->
-<div id="certModal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="fullImg">
-</div>
-   
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Dilli Raj Bhatta. Built with Passion.</p>
+        <p>&copy; 2026 Dilli Raj Bhatta.Built for Performance.</p>
     </footer>
-
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById("certModal");
+            const img = document.getElementById("fullImg");
+            modal.style.display = "flex";
+            img.src = src;
+        }
+        function closeModal() {
+            document.getElementById("certModal").style.display = "none";
+        }
+        document.addEventListener('keydown', (e) => { if(e.key === "Escape") closeModal(); });
+    </script>
 </body>
 </html>
